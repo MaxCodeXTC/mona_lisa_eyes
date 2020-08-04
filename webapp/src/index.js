@@ -76,9 +76,9 @@ function moveEyes(leftEye, rightEye) {
 }
 
 const renderPrediction = async () => {
-  if (isSafari) {
-    resizeItems();
-  }
+  // if (isSafari) {
+  //   resizeItems();
+  // }
   const returnTensors = false;
   const flipHorizontal = true;
   const annotateBoxes = true;
