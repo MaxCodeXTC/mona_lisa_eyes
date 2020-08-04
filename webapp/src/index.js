@@ -11,6 +11,8 @@ const heightRatio = 0.33603092783;
 const headTopRatio = 0.11002474226;
 
 const marginLeftRatio = 0.30577839955;
+const isMobile = (/Mobi/.test(navigator.userAgent));
+
 
 
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -76,7 +78,7 @@ function moveEyes(leftEye, rightEye) {
 }
 
 const renderPrediction = async () => {
-  if (isSafari) {
+  if (isSafari && !isMobile) {
     resizeItems();
   }
   const returnTensors = false;
