@@ -96,10 +96,11 @@ const renderPrediction = async () => {
 };
 
 const setupPage = async () => {
-  resizeItems();
   await tf.setBackend(state.backend);
   await setupCamera();
   video.play();
+
+  resizeItems();
 
   videoWidth = video.videoWidth;
   videoHeight = video.videoHeight;
