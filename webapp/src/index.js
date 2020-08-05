@@ -96,11 +96,11 @@ const renderPrediction = async () => {
 };
 
 const setupPage = async () => {
+  resizeItems();
   await tf.setBackend(state.backend);
   await setupCamera();
   video.play();
 
-  resizeItems();
 
   videoWidth = video.videoWidth;
   videoHeight = video.videoHeight;
@@ -110,9 +110,9 @@ const setupPage = async () => {
     -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
     transform: scale(-1, 1); filter: FlipH;";
 
-  video.setAttribute('autoplay', '');
-  video.setAttribute('muted', '');
-  video.setAttribute('playsinline', '');
+  // video.setAttribute('autoplay', '');
+  // video.setAttribute('muted', '');
+  // video.setAttribute('playsinline', '');
 
 
   const cam = document.querySelector("#cam");
@@ -136,7 +136,6 @@ const resizeItems = async() => {
   // Calculate the margin left with respect to the width of the picture
   deepFakeImage.style.marginLeft = monaLisaWithFrame.width * marginLeftRatio  + "px";
 }
-
 
 window.addEventListener('resize', resizeItems);
 
