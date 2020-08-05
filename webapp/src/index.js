@@ -3,9 +3,7 @@ import * as blazeface from '@tensorflow-models/blazeface';
 import * as tf from '@tensorflow/tfjs-core';
 import * as tfjsWasm from '@tensorflow/tfjs-backend-wasm';
 
-tfjsWasm.setWasmPath('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@latest/dist/tfjs-backend-wasm.wasm');
-
-
+tfjsWasm.setWasmPath("./assets/tfjs-backend-wasm.wasm");
 
 const heightRatio = 0.33603092783;
 const headTopRatio = 0.11002474226;
@@ -78,7 +76,7 @@ function moveEyes(leftEye, rightEye) {
 }
 
 const renderPrediction = async () => {
-  resizeItems();
+  // resizeItems();
   const returnTensors = false;
   const flipHorizontal = true;
   const annotateBoxes = true;
@@ -100,7 +98,6 @@ const setupPage = async () => {
   await tf.setBackend(state.backend);
   await setupCamera();
   video.play();
-
 
   videoWidth = video.videoWidth;
   videoHeight = video.videoHeight;
