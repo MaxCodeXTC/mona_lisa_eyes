@@ -78,7 +78,7 @@ function moveEyes(leftEye, rightEye) {
 }
 
 const renderPrediction = async () => {
-  if (isSafari && !isMobile) {
+  if (isSafari) {
     resizeItems();
   }
   const returnTensors = false;
