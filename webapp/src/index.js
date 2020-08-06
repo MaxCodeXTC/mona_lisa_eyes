@@ -95,7 +95,6 @@ const setupPage = async () => {
   resizeItems();
   await tf.setBackend(state.backend);
   await setupCamera();
-  video.play();
 
   videoWidth = video.videoWidth;
   videoHeight = video.videoHeight;
@@ -108,6 +107,7 @@ const setupPage = async () => {
   video.setAttribute('autoplay', '');
   video.setAttribute('muted', '');
   video.setAttribute('playsinline', '');
+  video.play();
 
   const cam = document.querySelector("#cam");
   cam.style.width = monaLisaWithFrame.width * camWidthRatio + "px";
