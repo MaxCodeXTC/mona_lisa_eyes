@@ -122,6 +122,11 @@ a:hover {
     display: flex;
     flex-direction: column;
   }
+
+  #monaLisaWithFrame {
+    min-height: 500px;
+  }
+
 }
 
 @media only screen and (max-device-width : 640px) {
@@ -138,5 +143,7 @@ a:hover {
     display: flex;
     flex-direction: column;
   }
+
+
 
 }

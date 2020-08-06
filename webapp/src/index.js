@@ -11,8 +11,6 @@ const headTopRatio = 0.11002474226;
 const marginLeftRatio = 0.30577839955;
 const isMobile = (/Mobi/.test(navigator.userAgent));
 
-
-
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 const camWidthRatio = 0.2;
 
@@ -111,7 +109,6 @@ const setupPage = async () => {
   video.setAttribute('muted', '');
   video.setAttribute('playsinline', '');
 
-
   const cam = document.querySelector("#cam");
   cam.style.width = monaLisaWithFrame.width * camWidthRatio + "px";
   cam.style.height = "100px";
@@ -122,8 +119,14 @@ const setupPage = async () => {
 
 
 const resizeItems = async() => {
+
   const monaLisaWithFrame = document.querySelector("#monaLisaWithFrame");
-  monaLisaWithFrame.style.height = window.innerHeight + "px";
+
+  if (isMobile) {
+    monaLisaWithFrame.style.height = "500px";
+  } else {
+    monaLisaWithFrame.style.height = window.innerHeight + "px";
+  }
 
   const paintingItems = document.querySelector("#paintingItems");
   const deepFakeImage = document.querySelector("#deepFakeImage");
