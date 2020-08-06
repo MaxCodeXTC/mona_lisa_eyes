@@ -107,9 +107,9 @@ const setupPage = async () => {
     -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
     transform: scale(-1, 1); filter: FlipH;";
 
-  // video.setAttribute('autoplay', '');
-  // video.setAttribute('muted', '');
-  // video.setAttribute('playsinline', '');
+  video.setAttribute('autoplay', '');
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
 
 
   const cam = document.querySelector("#cam");
