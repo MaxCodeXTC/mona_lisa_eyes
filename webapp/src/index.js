@@ -123,7 +123,7 @@ const resizeItems = async() => {
   const monaLisaWithFrame = document.querySelector("#monaLisaWithFrame");
 
   if (isMobile) {
-    monaLisaWithFrame.style.height = "500px";
+    monaLisaWithFrame.style.height = document.documentElement.clientHeight - 400 + "px";
   } else {
     monaLisaWithFrame.style.height = window.innerHeight + "px";
   }
