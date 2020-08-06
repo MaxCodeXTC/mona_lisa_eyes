@@ -74,9 +74,7 @@ function moveEyes(leftEye, rightEye) {
 }
 
 const renderPrediction = async () => {
-  if (isMobile) {
-    resizeItems();
-  }
+  resizeItems();
   const returnTensors = false;
   const flipHorizontal = true;
   const annotateBoxes = true;
